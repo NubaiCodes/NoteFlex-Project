@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head');%>
+</head>
+
+<body>
+    <header>
+        <%- include('partials/header');%>
+    </header>
+
+    <main>
+
+        <h1 class="my-5">Submit your notes</h1>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card" style="width: 100%">
+                        <div class="card-body">
+                            <h5 class="card-title">1st Semester</h5>
+                            <form id="submitform" action="/submit" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="semester" value="1">
+                                <div class="mb-3">
+                                    <select name="course" class="form-select" aria-label="Default select example">
+                                        <option selected disabled>Choose the subject:</option>
+                                        <option value="afc">Arquitectura e Funcionamento de
+                                            Computadores
+                                        </option>
+                                        <option value="rii">Redes e Internet I</option>
+                                        <option value="mdi">Multimédia Digital Interativa
+                                        </option>
+                                        <option value="mqi">Métodos Quantitativos I</option>
+                                        <option value="wmi">Web e Multimédia I</option>
+                                        <option value="pci">Programação de Computadores I
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="file" name="document" class="form-control" id="inputGroupFile02">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card" style="width: 100%">
+                        <div class="card-body">
+                            <h5 class="card-title">2nd Semester</h5>
+                            <form id="submitform2" action="/submit" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="semester" value="2">
+
+                                <div class="mb-3">
+                                    <select name="course" class="form-select" aria-label="Default select example">
+                                        <option selected disabled>Choose the subject:</option>
+                                        <option value="riii">Redes e Internet II</option>
+                                        <option value="wmii">Web e Multimédia II</option>
+                                        <option value="mqii">Métodos Quantitativos II</option>
+                                        <option value="ed">Estatística Descritiva</option>
+                                        <option value="tagi">Técnicas de Animação Gráfica I</option>
+                                        <option value="pcii">Programação de Computadores II</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="file" name="document" class="form-control" id="inputGroupFile02">
+                                </div>
+                                <button type="submit" value="Upload" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="my-5">Request your notes</h1>
+        <div class="container my-5">
+            <div class="card mx-auto" style="width: 50%">
+                <div class="card-body">
+                    <form id="requestform" action="/request" method="POST">
+                        <label for="formGroupExampleInput" class="form-label">Choose subject:</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="afc">
+                            <label class="form-check-label" for="inlineCheckbox1">AFC</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="rii">
+                            <label class="form-check-label" for="inlineCheckbox2">RII</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="wmi">
+                            <label class="form-check-label" for="inlineCheckbox3">WMI</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('partials/footer');%>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="javascripts/main.js"></script>
+</body>
+
+</html>
